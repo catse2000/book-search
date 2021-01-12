@@ -48,8 +48,8 @@ const resolvers = {
 
                 return updatedUser;
             }
-
-            throw new AuthenticationError('You need to be logged in!');
+            console.log(context.user);
+            throw new AuthenticationError('You need to be logged in :(!');
         },
         removeBook: async (parent, args, context) => {
             if (context.user) {
